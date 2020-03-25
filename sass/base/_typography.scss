@@ -1,0 +1,78 @@
+body{
+    font-family: 'lato';
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 4rem;
+
+    &--main{
+        font-size: 3.6rem;
+        font-weight: 700;
+        letter-spacing: 3.5rem;
+        display: block;
+        animation: popInLeft 3s 2 ease-in;
+        padding-bottom: .8rem;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-family: 5rem;
+        }
+    }
+
+    &--sub{
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 1.2rem;
+        display: block;
+        animation: popInRight 3s 2 ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700; 
+    background-image: linear-gradient(to right,   $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text; //sets whether an element's background extends underneath its border box, padding box, or content box.
+    color: transparent;
+    display: inline-block;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &:hover{
+        transform: skewX(15deg) skewY(3deg);
+        text-shadow: .5rem .9rem 2rem rgba($color-black, .15);
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: $default-font-size;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
